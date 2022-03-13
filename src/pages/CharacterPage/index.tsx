@@ -39,12 +39,18 @@ const CharacterPage = () => {
   return isLoading ? (
     <div>Chargement..</div>
   ) : (
-    <div>
+    <div className="bg-black flex justify-center h-screen">
       {characterData.map((character: any) => (
-        <div key={character.name}>
-          <div>{character.name}</div>
-          <div>{character.gender}</div>
-          <img src={character.image} alt="character_image" />
+        <div key={character.name} className="sm:flex">
+          <img
+            src={character.image}
+            alt="character_image"
+            className="w-80 h-80 rounded-lg object-contain"
+          />
+          <div>
+            <h2 className="mt-5 text-2xl text-white">{character.name}</h2>
+            <p className="text-amber-400 items-center">{character.gender}</p>
+          </div>
         </div>
       ))}
     </div>

@@ -9,15 +9,19 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CharacterPage from "./pages/CharacterPage";
+import Header from "./pages/components/Header";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" caseSensitive={false} element={<HomePage />} />
-        <Route path="/:character_name" element={<CharacterPage />} />
-      </Routes>
-    </Router>
+    <>
+      <Header />
+      <Router>
+        <Routes>
+          <Route path="/" caseSensitive={false} element={<HomePage />} />
+          <Route path="/:character_name" element={<CharacterPage />} />
+        </Routes>
+      </Router>
+    </>
   );
 };
 

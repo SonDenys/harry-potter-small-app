@@ -38,15 +38,30 @@ const Home = () => {
   return isLoading ? (
     <div>Chargement..</div>
   ) : (
-    <div className="">
+    <div className=" bg-black sm:grid md:grid-cols-3 xl:grid-cols-3 3xl:flex flex-wrap justify-center px-10">
       {charactersList.map((character: any) => (
-        <p
-          className="text-blue-500"
-          key={character.name}
-          onClick={() => navigate(`/${character.name}`)}
-        >
-          {character.name}
-        </p>
+        <div className="">
+          <div
+            className="group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 mt-5 flex flex-col items-center"
+            onClick={() => navigate(`/${character.name}`)}
+          >
+            <img
+              src={character.image}
+              alt="character_image"
+              className="w-80 h-80 rounded-lg object-contain"
+            />
+
+            <h2
+              className="mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold"
+              key={character.name}
+            >
+              {character.name}
+            </h2>
+            <p className=" text-amber-400 items-center opacity-0 group-hover:opacity-100">
+              {character.house}
+            </p>
+          </div>
+        </div>
       ))}
     </div>
   );
