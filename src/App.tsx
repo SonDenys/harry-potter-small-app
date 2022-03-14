@@ -13,15 +13,15 @@ import Header from "./pages/components/Header";
 
 const App = () => {
   return (
-    <>
-      <Header />
+    <div className="bg-gradient-to-r from-gray-700 via-gray-900 to-black">
       <Router>
+        <Header />
         <Routes>
           <Route path="/" caseSensitive={false} element={<HomePage />} />
           <Route path="/:character_name" element={<CharacterPage />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 };
 
