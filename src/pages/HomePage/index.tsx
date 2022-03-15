@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCharacters } from "../../helpers";
 import SpinningBubbles from "react-loading";
-import SearchBox from "../components/SearchBox";
+import SearchBox from "../../components/SearchBox";
 
 const Home = () => {
   // Il faut utiliser deux listes.

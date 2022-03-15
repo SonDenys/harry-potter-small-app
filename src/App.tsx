@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CharacterPage from "./pages/CharacterPage";
-import Header from "./pages/components/Header";
+import Header from "./components/Header";
 
 const App = () => {
   return (
